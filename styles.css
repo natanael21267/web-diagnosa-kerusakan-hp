@@ -1,0 +1,243 @@
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body: Background and general styling */
+body {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32); /* Gradasi hijau */
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+/* Header: Dark background with shadow */
+header {
+    background-color: #000;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navigation links */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+nav a.active {
+    background-color: #388E3C;
+}
+
+/* Main container styling */
+.container {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+/* Page heading */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3em;
+    border-radius: 30px;
+    padding: 15px 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #66BB6A;
+    transform: scale(1.05);
+}
+
+/* Result container for feedback */
+.result {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* Footer styling */
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #000;
+    color: white;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer link style */
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .form-group input {
+        font-size: 1em;
+    }
+    .form-group input[type="submit"] {
+        font-size: 1.1em;
+    }
+}
+
+/* Style for the rest of the page content */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav a:hover,
+header nav a.active {
+    text-decoration: underline;
+}
+
+/* Main content container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for page */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form group for text and inputs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Diagnosis result display */
+#hasilDiagnosa {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+}
+
+#diagnosaList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#diagnosaList li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Mark solutions in green */
+.solution {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Style for when diagnosis result is empty */
+#hasilDiagnosa ul {
+    color: red;
+    font-style: italic;
+}

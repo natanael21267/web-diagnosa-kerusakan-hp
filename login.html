@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exsyst Phone - Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    
+</header>
+
+<div class="container">
+    <h1>Login</h1>
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required placeholder="Masukkan username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Masukkan password">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Login">
+        </div>
+    </form>
+    <div id="errorMessage" style="color: red; display: none;">Username atau password salah. Coba lagi.</div>
+</div>
+
+<footer>
+   &copy; 2024 Exsyst Phone - All Rights Reserved
+</footer>
+
+<script>
+    // Daftar pengguna yang valid
+    const users = [
+        { username: 'user', password: '123' },
+        { username: 'admin', password: '123' },
+        { username: 'zoelva', password: '123' }
+    ];
+
+    // Mengambil elemen form dan error message
+    const loginForm = document.getElementById('loginForm');
+    const errorMessage = document.getElementById('errorMessage');
+
+    // Event listener untuk form submit
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Mencegah form submit biasa
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Cek apakah username dan password valid
+        const user = users.find(u => u.username === username && u.password === password);
+
+        if (user) {
+            // Jika valid, redirect ke halaman Home
+            window.location.href = 'index.html';
+        } else {
+            // Jika tidak valid, tampilkan pesan error
+            errorMessage.style.display = 'block';
+        }
+    });
+</script>
+</body>
+</html>
